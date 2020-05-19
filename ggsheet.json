@@ -12,7 +12,7 @@
 		{
 			"kind": "main",
 			"tag": "com-fd-googlesheetsstock",
-			"url": "http://localhost/SAC/sacgooglesheetstock/box/box.js",
+			"url": "http://localhost/SAC/sacgooglesheetstock/box/gsheet.js",
 			"integrity": "",
 			"ignoreIntegrity": true
 		}
