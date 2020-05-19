@@ -372,9 +372,10 @@
                     console.log("foundIndex: " + foundIndex);
 
                     if (foundIndex !== -1) {
+			console.log("+++++++++++++++++++++++++++++++");    
                         console.log(Ar[foundIndex].div);
                         GoogleSheets(Ar[foundIndex].div, value, formula, id, this._firstConnection);
-						Amchart(id, Ar[foundIndex].div, "", "", this._firstConnection)
+			Amchart(id, Ar[foundIndex].div, "", "", this._firstConnection);
                     }
                 }
             }
