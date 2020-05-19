@@ -96,8 +96,9 @@
 			});
 		} else {            	
             	var foundIndex = Ar.findIndex(x => x.id == id);
-			console.log("/////////////// Amchart"); 
+			console.log("/////////////// Amchart DATA"); 
 			console.log("/////////////// Amchart " + data);
+			console.log(JSON.stringify(data));
     			console.log("foundIndex drawChart: " + foundIndex);
     			ArChartGauge[foundIndex].chart.data = data;
             }
