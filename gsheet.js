@@ -251,7 +251,7 @@
         }
     };
 
-    class Box extends HTMLElement {
+    class Gsheet extends HTMLElement {
         constructor() {
             console.log("constructor");
             super();
@@ -375,5 +375,5 @@
 			console.log("onCustomWidgetDestroy");
         }
     }
-    customElements.define("com-fd-googlesheetsstock", Box);
+    customElements.define("com-fd-googlesheetsstock", Gsheet);
 })();
