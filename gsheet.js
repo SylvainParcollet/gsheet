@@ -153,8 +153,9 @@
             var request = gapi.client.sheets.spreadsheets.values.get(params);
             request.then(function(response) {
                 // TODO: Change code below to process the `response` object:
+		console.log("************RESPONSE************");    
                 console.log(response.result.values);
-
+		console.log("************RESPONSE************");    
 				if (typeof response.result.values !== 'undefined') {
 					var arraydata = [];
 					if (response.result.values.length > 0) {
@@ -166,11 +167,13 @@
 							});
 						}
 					}
+					console.log("************ARRAY DATA************");    
 					console.log(arraydata);
 					Amchart(id, divid, JSON.stringify(arraydata), formula_val, firsttime);
 				}
 
             }, function(reason) {
+		console.log("************ERROR************");    
                 console.error('error: ' + reason.result.error.message);
             });
         }
@@ -251,7 +254,7 @@
 	    
         for (var i = 0; i < Ar.length; i++) {
             GoogleSheets(Ar[i].div, Ar[i].value, Ar[i].formula, Ar[i].id, firsttime);
-			Amchart(Ar[i].id, Ar[i].div, Ar[i].value, "", firsttime)
+	    Amchart(Ar[i].id, Ar[i].div, Ar[i].value, "", firsttime);
         }
     };
 
