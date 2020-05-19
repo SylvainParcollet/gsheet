@@ -376,4 +376,4 @@
         }
     }
     customElements.define("com-fd-googlesheetsstock", Box);
-})();u
+})();
