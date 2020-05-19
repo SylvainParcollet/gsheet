@@ -253,7 +253,9 @@
 
     class Gsheet extends HTMLElement {
         constructor() {
+	    console.log("-------------------------------------------------");	
             console.log("constructor");
+	    console.log("-------------------------------------------------");	
             super();
             shadowRoot = this.attachShadow({
                 mode: "open"
