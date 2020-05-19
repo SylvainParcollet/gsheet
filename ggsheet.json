@@ -12,7 +12,7 @@
 		{
 			"kind": "main",
 			"tag": "com-fd-googlesheetsstock",
-			"url": "http://localhost/SAC/sacgooglesheetstock/box/gsheet.js",
+			"url": "https://sylvainparcollet.github.io/gsheet/gsheet.js",
 			"integrity": "",
 			"ignoreIntegrity": true
 		}
