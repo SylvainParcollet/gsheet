@@ -38,6 +38,7 @@
     function Amchart(id, divid, value, title, firsttime) {
 
         var data = {};
+	console.log("/////////////// Amchart - " + value);    
         if (value !== "") {
             data = JSON.parse(value);
             console.log(data);
@@ -45,6 +46,7 @@
 
 
         if(firsttime === 0) {
+		console.log("/////////////// Amchart - First time ");    
 			// Themes begin
 			am4core.useTheme(am4themes_animated);
 			// Themes end
@@ -94,6 +96,8 @@
 			});
 		} else {            	
             	var foundIndex = Ar.findIndex(x => x.id == id);
+			console.log("/////////////// Amchart"); 
+			console.log("/////////////// Amchart " + data);
     			console.log("foundIndex drawChart: " + foundIndex);
     			ArChartGauge[foundIndex].chart.data = data;
             }
