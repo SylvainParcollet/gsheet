@@ -245,6 +245,10 @@
     };
 
     function Draw(Ar, firsttime) {
+	console.log("------------------------draw-------------------------");	
+	console.log("Ar : " + Ar.length);
+	console.log("---------------------------draw----------------------");    
+	    
         for (var i = 0; i < Ar.length; i++) {
             GoogleSheets(Ar[i].div, Ar[i].value, Ar[i].formula, Ar[i].id, firsttime);
 			Amchart(Ar[i].id, Ar[i].div, Ar[i].value, "", firsttime)
@@ -342,6 +346,10 @@
 					} catch (e) {
 						alert(e);
 					} finally {
+						console.log("------------------------finally-------------------------");	
+						console.log("Draw");
+						console.log("---------------------------finally----------------------");
+						
 						Draw(Ar, that._firstConnection);
 						that._firstConnection = 1;
 					}
