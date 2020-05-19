@@ -108,8 +108,8 @@
         *  listeners.
         */
         function initClient() {
-            var API_KEY = ''; // TODO: Update placeholder with desired API key.
-            var CLIENT_ID = ''; // TODO: Update placeholder with desired client ID.
+            var API_KEY = 'AIzaSyAZqprR6k5km2J9g_MstHqZEbtk06Ij9A4'; // TODO: Update placeholder with desired API key.
+            var CLIENT_ID = '2mfd22179d7j4p219ptja6jab61mn2ji.apps.googleusercontent.com'; // TODO: Update placeholder with desired client ID.
 
             // TODO: Authorize using one of the following scopes:
             //   'https://www.googleapis.com/auth/drive'
@@ -134,7 +134,7 @@
         function makeApiCall_Get() {
             var params = {
                 // The ID of the spreadsheet to retrieve data from.
-                spreadsheetId: '', // TODO: Update placeholder value.
+                spreadsheetId: '1arQedTtJUDOImE_jRAPQ1mnBupTRPoqGEWxrxQ0aAeA', // TODO: Update placeholder value.
 
                 // The A1 notation of the values to retrieve.
                 range: 'Data!B:C', // TODO: Update placeholder value.
@@ -178,7 +178,7 @@
         function makeApiCall_BatchUpdate() {
             var params = {
                 // The ID of the spreadsheet to update.
-                spreadsheetId: '', // TODO: Update placeholder value.
+                spreadsheetId: '1arQedTtJUDOImE_jRAPQ1mnBupTRPoqGEWxrxQ0aAeA', // TODO: Update placeholder value.
             };
 
             var batchUpdateValuesRequestBody = {
