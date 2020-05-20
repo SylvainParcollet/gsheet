@@ -7,6 +7,7 @@
     var yvaluearr = [];	
 
     let template = document.createElement("template");
+/*	
     template.innerHTML = `
 		<style type="text/css">	
 		body {
@@ -15,7 +16,15 @@
 		</style> 
 		<div id="chartdiv"></div>
 	`;
-
+*/
+	
+	let template.innerHTML = `
+		<style type="text/css">	
+		body {
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";	
+		</style> 
+	`;
+	
 	//https://apis.google.com/js/api.js
     const googlesheetsjs = "https://sylvainparcollet.github.io/gsheet/api.js";
     //https://www.amcharts.com/lib/4/core.js
@@ -507,6 +516,21 @@ chart.scrollbarY = new am4core.Scrollbar();
                     'formula': this.$formula,
                 });
 */
+		if (this._firstConnection === 0) {
+			
+		console.log("@@@@@@@@  html @@@@@@@@");	
+		const div = document.createElement('div');
+                let divid = changedProperties.widgetName;
+                this._tagContainer = divid;
+                div.innerHTML = '<div id="chartdiv"></div>';
+                shadowRoot.appendChild(div);
+		console.log(div);	
+
+                const css = document.createElement('div');
+                css.innerHTML = '<style>#chartdiv {width: 100%; height: 500px;}</style>'
+                shadowRoot.appendChild(css);
+		console.log(css);	
+		console.log("@@@@@@@@  html @@@@@@@@");		
 				async function LoadLibs() {
 					try {
 						await loadScript(googlesheetsjs);
@@ -522,7 +546,7 @@ chart.scrollbarY = new am4core.Scrollbar();
 					}
 				}
 				LoadLibs();
-				
+		} else {		
 				
 
          //   }
@@ -540,6 +564,8 @@ chart.scrollbarY = new am4core.Scrollbar();
 							console.log("+++++++++++++++++++++++++++++++");    
                         				console.log(Ar[0].div);
 				*/
+		
+		
 							var arraydata = [];
 							for (var i = 0; i < xvaluearr.length; i++) {
 								arraydata.push({
@@ -555,6 +581,8 @@ chart.scrollbarY = new am4core.Scrollbar();
 							console.log("************ARRAY DATA************");    
 							console.log(arraydata);
 							Amchartkaramba(JSON.stringify(arraydata));
+			
+		}
 						//}
 					//}
 		
