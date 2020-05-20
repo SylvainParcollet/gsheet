@@ -386,12 +386,12 @@
 						
 						
 						var arraydata = [];
-						for (i = 0; i < xvaluearr.length; i++) {
+						for (var i = 0; i < xvaluearr.length; i++) {
 							arraydata.push({
 								"date": xvaluearr[i]
 							});
 						}
-							for (j = 0; j < yvaluearr.length; j++) {
+						for (var j = 0; j < yvaluearr.length; j++) {
 							arraydata.push({
 								"value": yvaluearr[j]
 							});
