@@ -393,7 +393,7 @@
 			console.log("+++++++++++++++++++++++++++++++");    
                         console.log(Ar[foundIndex].div);
                         GoogleSheets(Ar[foundIndex].div, value, formula, id, this._firstConnection);
-			Amchart(id, Ar[foundIndex].div, value, "Chart Title", this._firstConnection);
+			Amchart(id, Ar[foundIndex].div, "", "Chart Title", this._firstConnection);
                     }
                 }
             }
