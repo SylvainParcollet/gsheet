@@ -582,14 +582,17 @@ chart.scrollbarY = new am4core.Scrollbar();
 							var arraydata = [];
 							for (var i = 0; i < xvaluearr.length; i++) {
 								arraydata.push({
-									"category": xvaluearr[i]
+									"category": xvaluearr[i],
+									"value": parseInt(yvaluearr[j])
 								});
 							}
+			/*
 							for (var j = 0; j < yvaluearr.length; j++) {
 								arraydata.push({
 									"value": parseInt(yvaluearr[j])
 								});
 							}
+							*/
 
 							console.log("************ARRAY DATA************");    
 							console.log(arraydata);
