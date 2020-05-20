@@ -422,7 +422,7 @@
 							}
 							for (var j = 0; j < yvaluearr.length; j++) {
 								arraydata.push({
-									"value": yvaluearr[j]
+									"value": parseInt(yvaluearr[j])
 								});
 							}
 
