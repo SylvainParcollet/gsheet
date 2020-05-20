@@ -28,6 +28,11 @@
 			"description": "formula",
 			"default": ""
 		},
+		"xvalue": {
+			"type": "string",
+			"description": "xvalue",
+			"default": ""
+		},
 		"width": {
 			"type": "integer",
 			"default": 50
@@ -50,9 +55,14 @@
 					"name": "newFormula",
 					"type": "string",
 					"description": "Google Sheets Formula"
+				},
+				{
+					"name": "newxvalue",
+					"type": "string",
+					"description": "xvalue"
 				}
 			],
-			"body": "this.value = newValue; this.formula = newFormula;"
+			"body": "this.value = newValue; this.formula = newFormula;this.xvalue = newxvalue;"
 		},
 		"getValue": {
 			"returnType": "string",
