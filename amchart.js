@@ -527,7 +527,7 @@ chart.scrollbarY = new am4core.Scrollbar();
 
          //   }
 	//	else {
-			var id = this.$value.split("|")[0];
+	/*		var id = this.$value.split("|")[0];
                 	console.log("id: " + id);
 			
 			var value = this.$value.split("|")[1];
@@ -539,7 +539,7 @@ chart.scrollbarY = new am4core.Scrollbar();
 			//if (foundIndex !== -1) {
 							console.log("+++++++++++++++++++++++++++++++");    
                         				console.log(Ar[0].div);
-				
+				*/
 							var arraydata = [];
 							for (var i = 0; i < xvaluearr.length; i++) {
 								arraydata.push({
@@ -556,7 +556,7 @@ chart.scrollbarY = new am4core.Scrollbar();
 							console.log(arraydata);
 							Amchartkaramba(JSON.stringify(arraydata));
 						//}
-					}
+					//}
 		
 	//	}
 			
