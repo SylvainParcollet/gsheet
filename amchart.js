@@ -11,7 +11,6 @@
 		<style type="text/css">	
 		body {
 		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-		}
 		</style>       
 	`;
 
@@ -116,6 +115,94 @@
             }
 
     };
+	
+
+    // Create the chart
+    function Amchartkaramba(id, divid, value, title, firsttime) {
+
+        var data = {};
+	console.log("/////////////// Amchart - " + value);    
+        if (value !== "") {
+            data = JSON.parse(value);
+            console.log(data);
+        }
+	console.log("/////////////// Amchart - A ");    
+	am4core.useTheme(am4themes_animated);
+	
+	console.log("/////////////// Amchart - create ");    
+	var chart = am4core.create("chartdiv", am4charts.XYChart);
+	chart.data = data;    
+
+/*
+        if(firsttime === 0) {
+		console.log("/////////////// Amchart - First time ");    
+			// Themes begin
+			am4core.useTheme(am4themes_animated);
+			// Themes end
+			console.log("/////////////// Amchart - create start "); 
+			console.log(divid);
+			console.log("/////////////// Amchart - create end "); 
+		
+			// Create chart instance
+			var chart = am4core.create(divid, am4charts.XYChart);
+
+			// Add data
+			chart.data = data;
+			console.log("/////////////// Amchart - data added "); 
+			// Set input format for the dates
+			chart.dateFormatter.inputDateFormat = "dd-MM-yyyy";
+			console.log("/////////////// Amchart - date format "); 
+			// Create axes	
+			var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+			dateAxis.renderer.grid.template.location = 0;
+			dateAxis.renderer.minGridDistance = 50;
+
+			var idx1 = title.indexOf('"');
+			var idx2 = title.indexOf(',');
+			var str_fin = title.substring(idx1, idx2);
+
+			dateAxis.title.text = str_fin;
+			dateAxis.title.fontWeight = "bold";
+			console.log("/////////////// Amchart - date axis "); 
+			var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+			console.log("/////////////// Amchart - value axis"); 
+
+			// Create series
+			var series = chart.series.push(new am4charts.LineSeries());
+			series.dataFields.valueY = "value";
+			series.dataFields.dateX = "date";
+			series.strokeWidth = 3;
+			series.fillOpacity = 0.5;
+			console.log("/////////////// Amchart - series "); 
+			// Add vertical scrollbar
+			chart.scrollbarY = new am4core.Scrollbar();
+			chart.scrollbarY.marginLeft = 0;
+
+			// Add cursor
+			chart.cursor = new am4charts.XYCursor();
+			chart.cursor.behavior = "zoomY";
+			chart.cursor.lineX.disabled = true;
+			console.log("/////////////// Amchart - push start"); 
+			console.log("id " + id); 
+			console.log("--------------------------"); 
+			console.log("chart " + chart); 
+			console.log("/////////////// Amchart - push end "); 
+			ArChartGauge.push({
+				'id': id,
+				'chart': chart
+			});
+		} else {            	
+            	var foundIndex = Ar.findIndex(x => x.id == id);
+			console.log("/////////////// Amchart DATA"); 
+			console.log("/////////////// Amchart DATA " + id);
+			console.log("/////////////// Amchart DATA " + Ar);
+			console.log("/////////////// Amchart DATA " + ArChartGauge);
+			console.log(JSON.stringify(data));
+    			console.log("foundIndex drawChart: " + foundIndex);
+    			ArChartGauge[0].chart.data = data;
+            }
+*/
+    };	
 
     // Google Sheets
     function GoogleSheets(divid, text_val, formula_val, id, firsttime) {
@@ -362,11 +449,11 @@
                 const div = document.createElement('div');
                 let divid = changedProperties.widgetName;
                 this._tagContainer = divid;
-                div.innerHTML = '<div id="container_' + divid + '"></div>';
+                div.innerHTML = '<div id="chartdiv"></div>';
                 shadowRoot.appendChild(div);
 
                 const css = document.createElement('div');
-                css.innerHTML = '<style>#container_' + divid + ' {width: 100%; height: 500px;}</style>'
+                css.innerHTML = '<style>#chartdiv {width: 100%; height: 500px;}</style>'
                 shadowRoot.appendChild(css);
 
                 var mapcanvas_divstr = shadowRoot.getElementById('container_' + divid);
