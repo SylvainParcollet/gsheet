@@ -265,7 +265,7 @@
         }
     };
 
-    class Amchart extends HTMLElement {
+    class Amchartmain extends HTMLElement {
         constructor() {
 	    console.log("-------------------------------------------------");	
             console.log("constructor");
@@ -438,5 +438,5 @@
 			console.log("onCustomWidgetDestroy");
         }
     }
-    customElements.define("com-fd-amchart", Amchart);
+    customElements.define("com-fd-amchart", Amchartmain);
 })();
