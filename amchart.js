@@ -535,6 +535,10 @@ chart.scrollbarY = new am4core.Scrollbar();
 		var mapcanvas_divstr = shadowRoot.getElementById("chartdiv");
 			
                 console.log(mapcanvas_divstr);	
+		Ar.push({
+                    'div': mapcanvas_divstr
+                });
+	
 			console.log("@@@@@@@@   @@@@@@@@");
 		console.log(css);
 			console.log("@@@@@@@@   @@@@@@@@");
@@ -589,7 +593,7 @@ chart.scrollbarY = new am4core.Scrollbar();
 
 							console.log("************ARRAY DATA************");    
 							console.log(arraydata);
-							Amchartkaramba(mapcanvas_divstr,JSON.stringify(arraydata));
+							Amchartkaramba(Ar[0].div,JSON.stringify(arraydata));
 			
 		}
 						//}
