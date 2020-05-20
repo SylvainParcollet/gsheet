@@ -52,17 +52,20 @@
 			// Themes begin
 			am4core.useTheme(am4themes_animated);
 			// Themes end
-
+			console.log("/////////////// Amchart - create start "); 
+			console.log(divid);
+			console.log("/////////////// Amchart - create end "); 
+		
 			// Create chart instance
 			var chart = am4core.create(divid, am4charts.XYChart);
 
 			// Add data
 			chart.data = data;
-
+			console.log("/////////////// Amchart - data added "); 
 			// Set input format for the dates
 			chart.dateFormatter.inputDateFormat = "dd-MM-yyyy";
-
-			// Create axes
+			console.log("/////////////// Amchart - date format "); 
+			// Create axes	
 			var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
 			dateAxis.renderer.grid.template.location = 0;
 			dateAxis.renderer.minGridDistance = 50;
@@ -73,8 +76,9 @@
 
 			dateAxis.title.text = str_fin;
 			dateAxis.title.fontWeight = "bold";
-
+			console.log("/////////////// Amchart - date axis "); 
 			var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+			console.log("/////////////// Amchart - value axis"); 
 
 			// Create series
 			var series = chart.series.push(new am4charts.LineSeries());
@@ -82,7 +86,7 @@
 			series.dataFields.dateX = "date";
 			series.strokeWidth = 3;
 			series.fillOpacity = 0.5;
-
+			console.log("/////////////// Amchart - series "); 
 			// Add vertical scrollbar
 			chart.scrollbarY = new am4core.Scrollbar();
 			chart.scrollbarY.marginLeft = 0;
@@ -91,7 +95,11 @@
 			chart.cursor = new am4charts.XYCursor();
 			chart.cursor.behavior = "zoomY";
 			chart.cursor.lineX.disabled = true;
-
+			console.log("/////////////// Amchart - push start"); 
+			console.log("id " + id); 
+			console.log("--------------------------"); 
+			console.log("chart " + chart); 
+			console.log("/////////////// Amchart - push end "); 
 			ArChartGauge.push({
 				'id': id,
 				'chart': chart
