@@ -356,6 +356,7 @@
 					} finally {
 						console.log("------------------------finally-------------------------");	
 						console.log("Draw");
+						console.log(JSON.stringify(ar));
 						console.log("---------------------------finally----------------------");
 						
 						Draw(Ar, that._firstConnection);
