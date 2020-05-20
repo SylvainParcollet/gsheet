@@ -3,6 +3,7 @@
 
     var Ar = [];
     var ArChartGauge = [];
+    var xvaluearr = [];		
 
     let template = document.createElement("template");
     template.innerHTML = `
@@ -326,10 +327,12 @@
 		
 	    if ("xvalue" in changedProperties) {
                 console.log("xvalue:" + changedProperties["xvalue"]);
-                this.xvalue = changedProperties["xvalue"];
+                this.$xvalue = changedProperties["xvalue"];
 
             }
 
+	    xvaluearr = this.$xvalue.split(';');
+	    console.log(xvaluearr);		
 	    console.log("%%%%%% INPUT %%%%%%");	
             console.log("firsttime: " + this._firstConnection);
             var that = this;
