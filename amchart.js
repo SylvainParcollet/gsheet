@@ -261,6 +261,7 @@
 	    
         for (var i = 0; i < Ar.length; i++) {
             //GoogleSheets(Ar[i].div, Ar[i].value, Ar[i].formula, Ar[i].id, firsttime);
+	    console.log("------ Loop " + Ar[i].div + " ---- i : " + i);
 	    Amchart(Ar[i].id, Ar[i].div, Ar[i].value, "", firsttime);
         }
     };
