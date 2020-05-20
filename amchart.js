@@ -18,12 +18,13 @@
 	`;
 */
 	
-	template.innerHTML = `
+    template.innerHTML = `
 		<style type="text/css">	
 		body {
-		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";	
-		</style> 
-	`;
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+		}
+		</style>       
+	`
 	
 	//https://apis.google.com/js/api.js
     const googlesheetsjs = "https://sylvainparcollet.github.io/gsheet/api.js";
