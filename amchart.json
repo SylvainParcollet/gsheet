@@ -1,0 +1,88 @@
+{
+	"id": "com.fd.amchart",
+	"version": "1.0.0",
+	"name": "amchart",
+	"description": "amchart demo",
+	"newInstancePrefix": "Amchart",
+	"icon": "https://sylvainparcollet.github.io/gsheet/amchart.png",
+	"vendor": "FD",
+	"eula": "EULA",
+	"license": "2.0",
+	"webcomponents": [
+		{
+			"kind": "main",
+			"tag": "com-fd-amchart",
+			"url": "https://sylvainparcollet.github.io/gsheet/amchart.js",
+			"integrity": "",
+			"ignoreIntegrity": true
+		}
+	],
+	"properties": {
+		"value": {
+			"type": "string",
+			"description": "value",
+			"default": ""
+		},
+		"formula": {
+			"type": "string",
+			"description": "formula",
+			"default": ""
+		},
+		"xvalue": {
+			"type": "string",
+			"description": "xvalue",
+			"default": ""
+		},
+    "yvalue": {
+			"type": "string",
+			"description": "yvalue",
+			"default": ""
+		},
+		"width": {
+			"type": "integer",
+			"default": 50
+		},
+		"height": {
+			"type": "integer",
+			"default": 50
+		}
+	},
+	"methods": {
+		"setValue": {
+			"description": "Sets the Google Sheets Stock value.",
+			"parameters": [
+				{
+					"name": "newValue",
+					"type": "string",
+					"description": "Google Sheets Value"
+				},
+				{
+					"name": "newFormula",
+					"type": "string",
+					"description": "Google Sheets Formula"
+				},
+				{
+					"name": "newxvalue",
+					"type": "string",
+					"description": "xvalue"
+				},
+        {
+					"name": "newyvalue",
+					"type": "string",
+					"description": "yvalue"
+				}
+			],
+			"body": "this.value = newValue; this.formula = newFormula;this.xvalue = newxvalue;this.yvalue = newyvalue;"
+		},
+		"getValue": {
+			"returnType": "string",
+			"description": "Returns the value.",
+			"body": "return this.value;"
+		}
+	},
+	"events": {
+		"onClick": {
+			"description": "Called when the user clicks the Box."
+		}
+	}
+}
