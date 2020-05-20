@@ -4,7 +4,7 @@
     var Ar = [];
     var ArChartGauge = [];
     var xvaluearr = [];	
-	var yvaluearr = [];	
+    var yvaluearr = [];	
 
     let template = document.createElement("template");
     template.innerHTML = `
@@ -265,7 +265,7 @@
         }
     };
 
-    class Gsheet extends HTMLElement {
+    class Amchart extends HTMLElement {
         constructor() {
 	    console.log("-------------------------------------------------");	
             console.log("constructor");
@@ -438,5 +438,5 @@
 			console.log("onCustomWidgetDestroy");
         }
     }
-    customElements.define("com-fd-googlesheetsstock", Gsheet);
+    customElements.define("com-fd-amchart", Amchart);
 })();
