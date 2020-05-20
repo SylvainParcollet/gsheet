@@ -28,6 +28,9 @@
 	function loadScript(src) {
 	  return new Promise(function(resolve, reject) {
 		let script = document.createElement('script');
+		console.log("¦¦¦¦¦¦¦¦¦¦¦¦ Load script ¦¦¦¦¦¦¦¦¦¦");
+		console.log(src);	    
+		console.log("¦¦¦¦¦¦¦¦¦¦¦¦ Load script ¦¦¦¦¦¦¦¦¦¦");	    
 		script.src = src;
 
 		script.onload = () => {console.log("Load: " + src); resolve(script);}
