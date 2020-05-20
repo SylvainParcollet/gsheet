@@ -5,7 +5,7 @@
     var ArChartGauge = [];
     var xvaluearr = [];	
     var yvaluearr = [];	
-    var mapcanvas_divstr;	
+    var mapcanvas_divstr = "";	
 
     let template = document.createElement("template");
 /*	
@@ -134,7 +134,7 @@
 	
 
     // Create the chart
-    function Amchartkaramba(value) {
+    function Amchartkaramba(divid,value) {
 
         var data = {};
 	console.log("/////////////// Amchart - " + value);    
@@ -145,8 +145,8 @@
 	console.log("/////////////// Amchart - A ");    
 	am4core.useTheme(am4themes_animated);
 	
-	console.log("/////////////// Amchart - create " + mapcanvas_divstr);    
-	var chart = am4core.create(mapcanvas_divstr, am4charts.XYChart);
+	console.log("/////////////// Amchart - create " + divid);    
+	var chart = am4core.create(divid, am4charts.XYChart);
 	chart.data = data;    
 	var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
 	categoryAxis.renderer.grid.template.location = 0;
@@ -589,7 +589,7 @@ chart.scrollbarY = new am4core.Scrollbar();
 
 							console.log("************ARRAY DATA************");    
 							console.log(arraydata);
-							Amchartkaramba(JSON.stringify(arraydata));
+							Amchartkaramba(mapcanvas_divstr,JSON.stringify(arraydata));
 			
 		}
 						//}
