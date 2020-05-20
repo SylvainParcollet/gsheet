@@ -386,7 +386,11 @@
 				}
 				LoadLibs();
 				
-				var arraydata = [];
+				
+
+            }
+		else {
+						var arraydata = [];
 						for (var i = 0; i < xvaluearr.length; i++) {
 							arraydata.push({
 								"date": xvaluearr[i]
@@ -400,10 +404,10 @@
 
 						console.log("************ARRAY DATA************");    
 						console.log(arraydata);
-						Amchart(id, divid, JSON.stringify(arraydata), "Chart Title", 0);
-				
-
-            } 
+						Amchart("id", divid, JSON.stringify(arraydata), "Chart Title", 0);
+		
+		
+		}
 			
 /*			
 			else {
