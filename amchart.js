@@ -400,9 +400,9 @@
 			if (value !== "") {
                     		var foundIndex = Ar.findIndex(x => x.id == id);
                     		console.log("-------foundIndex: " + foundIndex);
-			if (foundIndex !== -1) {
+			//if (foundIndex !== -1) {
 							console.log("+++++++++++++++++++++++++++++++");    
-                        				console.log(Ar[foundIndex].div);
+                        				console.log(Ar[0].div);
 				
 							var arraydata = [];
 							for (var i = 0; i < xvaluearr.length; i++) {
@@ -418,8 +418,8 @@
 
 							console.log("************ARRAY DATA************");    
 							console.log(arraydata);
-							Amchart(id, Ar[foundIndex].div, JSON.stringify(arraydata), "Chart Title", 0);
-						}
+							Amchart(id, Ar[0].div, JSON.stringify(arraydata), "Chart Title", 0);
+						//}
 					}
 		
 		}
