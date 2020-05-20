@@ -388,10 +388,7 @@
 						alert(e);
 					} finally {
 						console.log("------------------------finally-------------------------");	
-						console.log("Draw");
-						console.log("---------------------------finally----------------------");
-						
-						Draw(Ar, that._firstConnection);
+						//Draw(Ar, that._firstConnection);
 						that._firstConnection = 1;	
 					}
 				}
