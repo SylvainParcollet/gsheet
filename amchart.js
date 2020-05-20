@@ -18,10 +18,10 @@
 	`;
 */
 	
-	let template.innerHTML = `
+	template.innerHTML = `
 		<style type="text/css">	
 		body {
-		font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";	
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";	
 		</style> 
 	`;
 	
