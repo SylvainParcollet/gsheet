@@ -426,7 +426,7 @@
 
 							console.log("************ARRAY DATA************");    
 							console.log(arraydata);
-							Amchart(id, Ar[0].div, JSON.stringify(arraydata), "Chart Title", 0);
+							Amchart(id, Ar[0].div, JSON.stringify(arraydata), "Chart Title", 1);
 						//}
 					}
 		
