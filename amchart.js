@@ -118,7 +118,7 @@
 	
 
     // Create the chart
-    function Amchartkaramba(id, divid, value, title, firsttime) {
+    function Amchartkaramba(value) {
 
         var data = {};
 	console.log("/////////////// Amchart - " + value);    
@@ -132,6 +132,43 @@
 	console.log("/////////////// Amchart - create ");    
 	var chart = am4core.create("chartdiv", am4charts.XYChart);
 	chart.data = data;    
+	var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+	categoryAxis.renderer.grid.template.location = 0;
+	categoryAxis.dataFields.category = "category";
+	categoryAxis.renderer.minGridDistance = 15;
+	categoryAxis.renderer.grid.template.location = 0.5;
+	categoryAxis.renderer.grid.template.strokeDasharray = "1,3";
+	categoryAxis.renderer.labels.template.rotation = -90;
+	categoryAxis.renderer.labels.template.horizontalCenter = "left";
+	categoryAxis.renderer.labels.template.location = 0.5;    
+	categoryAxis.renderer.labels.template.adapter.add("dx", function(dx, target) {
+	    return -target.maxRight / 2;
+	})
+	    
+	    	console.log("/////////////// Amchart - value axis ");
+	    
+	    var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+valueAxis.tooltip.disabled = true;
+valueAxis.renderer.ticks.template.disabled = true;
+valueAxis.renderer.axisFills.template.disabled = true;
+	    	    	console.log("/////////////// Amchart - series ");
+	    var series = chart.series.push(new am4charts.ColumnSeries());
+series.dataFields.categoryX = "category";
+series.dataFields.valueY = "value";
+series.tooltipText = "{valueY.value}";
+series.sequencedInterpolation = true;
+series.fillOpacity = 0;
+series.strokeOpacity = 1;
+series.strokeDashArray = "1,3";
+series.columns.template.width = 0.01;
+series.tooltip.pointerOrientation = "horizontal";
+	    	    	console.log("/////////////// Amchart - bullets ");
+	    var bullet = series.bullets.create(am4charts.CircleBullet);
+
+chart.cursor = new am4charts.XYCursor();
+
+chart.scrollbarX = new am4core.Scrollbar();
+chart.scrollbarY = new am4core.Scrollbar();
 
 /*
         if(firsttime === 0) {
@@ -501,7 +538,7 @@
 							var arraydata = [];
 							for (var i = 0; i < xvaluearr.length; i++) {
 								arraydata.push({
-									"date": xvaluearr[i]
+									"category": xvaluearr[i]
 								});
 							}
 							for (var j = 0; j < yvaluearr.length; j++) {
@@ -512,7 +549,7 @@
 
 							console.log("************ARRAY DATA************");    
 							console.log(arraydata);
-							Amchart(id, Ar[0].div, JSON.stringify(arraydata), "Chart Title", 0);
+							Amchartkaramba(JSON.stringify(arraydata));
 						//}
 					}
 		
