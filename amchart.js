@@ -532,7 +532,7 @@ chart.scrollbarY = new am4core.Scrollbar();
                 css.innerHTML = '<style>#chartdiv {width: 100%; height: 500px;}</style>'
                 shadowRoot.appendChild(css);
 		console.log("@@@@@@@@   @@@@@@@@");		
-		var mapcanvas_divstr = shadowRoot.getElementById(divid);
+		var mapcanvas_divstr = shadowRoot.getElementById("chartdiv");
 			
                 console.log(mapcanvas_divstr);	
 			console.log("@@@@@@@@   @@@@@@@@");
