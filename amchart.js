@@ -21,7 +21,7 @@
 	let template.innerHTML = `
 		<style type="text/css">	
 		body {
-		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";	
+		font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";	
 		</style> 
 	`;
 	
@@ -529,7 +529,8 @@ chart.scrollbarY = new am4core.Scrollbar();
                 const css = document.createElement('div');
                 css.innerHTML = '<style>#chartdiv {width: 100%; height: 500px;}</style>'
                 shadowRoot.appendChild(css);
-		console.log(css);	
+		console.log(css);
+		console.log(shadowRoot);
 		console.log("@@@@@@@@  html @@@@@@@@");		
 				async function LoadLibs() {
 					try {
