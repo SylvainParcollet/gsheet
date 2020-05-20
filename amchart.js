@@ -381,11 +381,12 @@
 						console.log("---------------------------finally----------------------");
 						
 						Draw(Ar, that._firstConnection);
-						that._firstConnection = 1;
-						
-						
-						
-						var arraydata = [];
+						that._firstConnection = 1;	
+					}
+				}
+				LoadLibs();
+				
+				var arraydata = [];
 						for (var i = 0; i < xvaluearr.length; i++) {
 							arraydata.push({
 								"date": xvaluearr[i]
@@ -400,16 +401,12 @@
 						console.log("************ARRAY DATA************");    
 						console.log(arraydata);
 						Amchart(id, divid, JSON.stringify(arraydata), "Chart Title", 0);
-										
-						
-						
-						
-					}
-				}
-				LoadLibs();
 				
 
-            } else {
+            } 
+			
+/*			
+			else {
                 var id = this.$value.split("|")[0];
                 console.log("id: " + id);
 
@@ -431,6 +428,9 @@
                     //}
                 }
             }
+*/			
+			
+			
         }
 
 		//When the custom widget is removed from the canvas or the analytic application is closed
