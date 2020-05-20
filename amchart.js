@@ -5,6 +5,7 @@
     var ArChartGauge = [];
     var xvaluearr = [];	
     var yvaluearr = [];	
+    var mapcanvas_divstr;	
 
     let template = document.createElement("template");
 /*	
@@ -144,8 +145,8 @@
 	console.log("/////////////// Amchart - A ");    
 	am4core.useTheme(am4themes_animated);
 	
-	console.log("/////////////// Amchart - create ");    
-	var chart = am4core.create("chartdiv", am4charts.XYChart);
+	console.log("/////////////// Amchart - create " + mapcanvas_divstr);    
+	var chart = am4core.create(mapcanvas_divstr, am4charts.XYChart);
 	chart.data = data;    
 	var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
 	categoryAxis.renderer.grid.template.location = 0;
@@ -530,7 +531,13 @@ chart.scrollbarY = new am4core.Scrollbar();
                 const css = document.createElement('div');
                 css.innerHTML = '<style>#chartdiv {width: 100%; height: 500px;}</style>'
                 shadowRoot.appendChild(css);
+		console.log("@@@@@@@@   @@@@@@@@");		
+		var mapcanvas_divstr = shadowRoot.getElementById(divid);
+			
+                console.log(mapcanvas_divstr);	
+			console.log("@@@@@@@@   @@@@@@@@");
 		console.log(css);
+			console.log("@@@@@@@@   @@@@@@@@");
 		console.log(shadowRoot);
 		console.log("@@@@@@@@  html @@@@@@@@");		
 				async function LoadLibs() {
