@@ -390,22 +390,36 @@
 
             }
 		else {
-						var arraydata = [];
-						for (var i = 0; i < xvaluearr.length; i++) {
-							arraydata.push({
-								"date": xvaluearr[i]
-							});
-						}
-						for (var j = 0; j < yvaluearr.length; j++) {
-							arraydata.push({
-								"value": yvaluearr[j]
-							});
-						}
+			var id = this.$value.split("|")[0];
+                	console.log("id: " + id);
+			
+			var value = this.$value.split("|")[1];
+                	console.log("value: " + value);
+			
+			if (value !== "") {
+                    		var foundIndex = Ar.findIndex(x => x.id == id);
+                    		console.log("-------foundIndex: " + foundIndex);
+			if (foundIndex !== -1) {
+							console.log("+++++++++++++++++++++++++++++++");    
+                        				console.log(Ar[foundIndex].div);
+				
+							var arraydata = [];
+							for (var i = 0; i < xvaluearr.length; i++) {
+								arraydata.push({
+									"date": xvaluearr[i]
+								});
+							}
+							for (var j = 0; j < yvaluearr.length; j++) {
+								arraydata.push({
+									"value": yvaluearr[j]
+								});
+							}
 
-						console.log("************ARRAY DATA************");    
-						console.log(arraydata);
-						Amchart("id", "chartdiv", JSON.stringify(arraydata), "Chart Title", 0);
-		
+							console.log("************ARRAY DATA************");    
+							console.log(arraydata);
+							Amchart(id, Ar[foundIndex].div, JSON.stringify(arraydata), "Chart Title", 0);
+						}
+					}
 		
 		}
 			
