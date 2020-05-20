@@ -79,7 +79,7 @@
 			console.log("/////////////// Amchart - date axis "); 
 			var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
 			console.log("/////////////// Amchart - value axis"); 
-
+/*
 			// Create series
 			var series = chart.series.push(new am4charts.LineSeries());
 			series.dataFields.valueY = "value";
@@ -103,7 +103,7 @@
 			ArChartGauge.push({
 				'id': id,
 				'chart': chart
-			});
+			});*/
 		} else {            	
             	var foundIndex = Ar.findIndex(x => x.id == id);
 			console.log("/////////////// Amchart DATA"); 
