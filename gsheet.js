@@ -51,7 +51,8 @@
 			// Themes begin
 			am4core.useTheme(am4themes_animated);
 			// Themes end
-
+ 
+		console.log(divid);
 			// Create chart instance
 			var chart = am4core.create(divid, am4charts.XYChart);
 
