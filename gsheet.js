@@ -321,6 +321,12 @@
                 this.$formula = changedProperties["formula"];
 
             }
+		
+	    if ("xvalue" in changedProperties) {
+                console.log("xvalue:" + changedProperties["xvalue"]);
+                this.xvalue = changedProperties["xvalue"];
+
+            }
 
             console.log("firsttime: " + this._firstConnection);
             var that = this;
