@@ -11,7 +11,9 @@
 		<style type="text/css">	
 		body {
 		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-		</style>       
+		#chartdiv {width: 100%; height: 500px;}		
+		</style> 
+		<div id="chartdiv"></div>
 	`;
 
 	//https://apis.google.com/js/api.js
@@ -481,7 +483,7 @@ chart.scrollbarY = new am4core.Scrollbar();
 			console.log("%%%%%% INPUT %%%%%%");	
             console.log("firsttime: " + this._firstConnection);
             var that = this;
-
+/*
             if (this._firstConnection === 0) {
                 const div = document.createElement('div');
                 let divid = changedProperties.widgetName;
@@ -501,7 +503,7 @@ chart.scrollbarY = new am4core.Scrollbar();
                     'value': this.$value,
                     'formula': this.$formula,
                 });
-
+*/
 				async function LoadLibs() {
 					try {
 						await loadScript(googlesheetsjs);
@@ -520,8 +522,8 @@ chart.scrollbarY = new am4core.Scrollbar();
 				
 				
 
-            }
-		else {
+         //   }
+	//	else {
 			var id = this.$value.split("|")[0];
                 	console.log("id: " + id);
 			
@@ -553,7 +555,7 @@ chart.scrollbarY = new am4core.Scrollbar();
 						//}
 					}
 		
-		}
+	//	}
 			
 /*			
 			else {
