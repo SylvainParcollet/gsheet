@@ -107,10 +107,12 @@
 		} else {            	
             	var foundIndex = Ar.findIndex(x => x.id == id);
 			console.log("/////////////// Amchart DATA"); 
-			console.log("/////////////// Amchart " + data);
+			console.log("/////////////// Amchart DATA " + id);
+			console.log("/////////////// Amchart DATA " + Ar);
+			console.log("/////////////// Amchart DATA " + ArChartGauge);
 			console.log(JSON.stringify(data));
     			console.log("foundIndex drawChart: " + foundIndex);
-    			ArChartGauge[foundIndex].chart.data = data;
+    			ArChartGauge[0].chart.data = data;
             }
 
     };
