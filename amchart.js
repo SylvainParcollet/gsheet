@@ -404,7 +404,7 @@
 
 						console.log("************ARRAY DATA************");    
 						console.log(arraydata);
-						Amchart("id", "mapcanvas_divstr", JSON.stringify(arraydata), "Chart Title", 0);
+						Amchart("id", "chartdiv", JSON.stringify(arraydata), "Chart Title", 0);
 		
 		
 		}
