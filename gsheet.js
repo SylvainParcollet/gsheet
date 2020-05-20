@@ -308,9 +308,11 @@
 		//When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
         onCustomWidgetAfterUpdate(changedProperties) {
 
-            console.log("onCustomWidgetAfterUpdate");
-            console.log(changedProperties);
+           console.log("onCustomWidgetAfterUpdate");
+           console.log(changedProperties);
 
+	   console.log("%%%%%% INPUT %%%%%%");	
+		
             if ("value" in changedProperties) {
                 console.log("value:" + changedProperties["value"]);
                 this.$value = changedProperties["value"];
@@ -328,6 +330,7 @@
 
             }
 
+	    console.log("%%%%%% INPUT %%%%%%");	
             console.log("firsttime: " + this._firstConnection);
             var that = this;
 
